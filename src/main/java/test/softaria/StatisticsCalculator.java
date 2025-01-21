@@ -1,26 +1,30 @@
 package test.softaria;
 
-import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class StatisticsCalculator {
 
-    public Statistics calculate(HashMap<String, String> yesterdayPages, HashMap<String, String> todayPages) {
+    public Statistics calculate(Map<String, String> yesterdayPages, Map<String, String> todayPages) {
 
-        Set<String> yesterdayURLs = yesterdayPages.keySet();
-        Set<String> todayURLs = todayPages.keySet();
+        Set<String> yesterdayURLs = Set.copyOf(yesterdayPages.keySet());
+        Set<String> todayURLs = Set.copyOf(todayPages.keySet());
 
-        Set<String> missingPages = yesterdayPages.keySet();
-        Set<String> newPages = todayPages.keySet();
+        Set<String> missingPages = yesterdayURLs.stream()
+                .filter(url -> !todayURLs.contains(url))
+                .collect(Collectors.toSet());
+        Set<String> newPages = todayURLs.stream()
+                .filter(url -> !yesterdayURLs.contains(url))
+                .collect(Collectors.toSet());
 
-        missingPages.removeAll(todayURLs);
-        newPages.removeAll(yesterdayURLs);
+        Set<String> maybeEditedPagesURLs = todayURLs.stream()
+                .filter(url -> !newPages.contains(url))
+                .collect(Collectors.toSet());
 
-        todayURLs.removeAll(newPages);
-
-        Set<String> editedPages = new HashSet<>(yesterdayURLs);
-        for (String url : todayURLs) {
+        Set<String> editedPages = new HashSet<>();
+        for (String url : maybeEditedPagesURLs) {
             if (!yesterdayPages.get(url).equals(todayPages.get(url))) {
                 editedPages.add(url);
             }
