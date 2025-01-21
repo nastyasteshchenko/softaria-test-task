@@ -78,6 +78,14 @@ class CommandLineParserTest {
     }
 
     @Test
+    public void testLessArgumentsForSetReceiverNameOption() {
+        assertThrows(ParseException.class, () -> commandLineParser.parse(
+                new String[]{getCLOptionName(OptionType.YESTERDAY_PAGES_FILE), yesterdayPagesFile.toString(),
+                        getCLOptionName(OptionType.TODAY_PAGES_FILE), todayPagesFile.toString(),
+                        getCLOptionName(OptionType.RECEIVER_NAME), RECEIVER_FIRST_NAME}));
+    }
+
+    @Test
     public void testNotExistingDirectory() {
         String notExistingFile = inputDir.resolve("i").toString();
         Throwable thrown = assertThrows(OptionsValuesException.class, () ->
