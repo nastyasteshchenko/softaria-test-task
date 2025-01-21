@@ -3,6 +3,8 @@ package test.softaria;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import com.google.common.io.Resources;
+import test.softaria.statistics.Statistics;
+import test.softaria.statistics.StatisticsCalculator;
 
 import java.io.IOException;
 import java.util.Map;

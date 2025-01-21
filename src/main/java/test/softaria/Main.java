@@ -5,6 +5,8 @@ import test.softaria.options.CommandLineParser;
 import test.softaria.options.OptionType;
 import test.softaria.options.OptionsValues;
 import test.softaria.options.OptionsValuesException;
+import test.softaria.statistics.Statistics;
+import test.softaria.statistics.StatisticsCalculator;
 
 import java.io.IOException;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package test.softaria;
+package test.softaria.statistics;
 
 import java.util.Set;
 
