@@ -1,0 +1,12 @@
+{
+  "https://example.com/home": "<html><head><title>Home</title></head><body><h1>Welcome to Example</h1></body></html>",
+  "https://example.com/about": "<html><head><title>About</title></head><body><h1>About Us</h1><p>New team member added.</p></body></html>",
+  "https://example.com/contact": "<html><head><title>Contact</title></head><body><h1>Contact Us</h1><p>Contact form updated.</p></body></html>",
+  "https://example.com/products": "<html><head><title>Products</title></head><body><h1>Our Products</h1><p>New product added to the list.</p></body></html>",
+  "https://example.com/services": "<html><head><title>Services</title></head><body><h1>Our Services</h1><p>New service offering available.</p></body></html>",
+  "https://example.com/blog": "<html><head><title>Blog</title></head><body><h1>Our Blog</h1></body></html>",
+  "https://example.com/careers": "<html><head><title>Careers</title></head><body><h1>Join Our Team</h1><p>New job opening listed.</p></body></html>",
+  "https://example.com/faq": "<html><head><title>FAQ</title></head><body><h1>Frequently Asked Questions</h1><p>Added answers to new questions.</p></body></html>",
+  "https://example.com/terms": "<html><head><title>Terms</title></head><body><h1>Terms and Conditions</h1><p>Policy updated.</p></body></html>",
+  "https://example.com/privacy": "<html><head><title>Privacy</title></head><body><h1>Privacy Policy</h1></body></html>"
+}

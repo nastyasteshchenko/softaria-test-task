@@ -1,0 +1,12 @@
+{
+  "https://example.com/home": "<html><head><title>Home</title></head><body><h1>Welcome to Example</h1></body></html>",
+  "https://example.com/about": "<html><head><title>About</title></head><body><h1>About Us</h1></body></html>",
+  "https://example.com/contact": "<html><head><title>Contact</title></head><body><h1>Contact Us</h1></body></html>",
+  "https://example.com/products": "<html><head><title>Products</title></head><body><h1>Our Products</h1></body></html>",
+  "https://example.com/services": "<html><head><title>Services</title></head><body><h1>Our Services</h1></body></html>",
+  "https://example.com/blog": "<html><head><title>Blog</title></head><body><h1>Our Blog</h1></body></html>",
+  "https://example.com/careers": "<html><head><title>Careers</title></head><body><h1>Join Our Team</h1></body></html>",
+  "https://example.com/privacy": "<html><head><title>Privacy</title></head><body><h1>Privacy Policy</h1></body></html>",
+  "https://example.com/image": "<html><head><title>Image</title></head><body><h1>Image image</h1></body></html>",
+  "https://cherry.com/cherry": "<html><head><title>Cherry</title></head><body><h1>Cherry cherry</h1></body></html>"
+}

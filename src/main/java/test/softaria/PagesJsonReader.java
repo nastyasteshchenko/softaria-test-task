@@ -1,16 +1,20 @@
 package test.softaria;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 
-public class PagesJsonReader {
+final class PagesJsonReader {
     private final static ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
-    HashMap<String, String> readToHashMap(String file) throws JsonProcessingException {
-        return OBJECT_MAPPER.readValue(file, new TypeReference<>() {
+    private PagesJsonReader() {
+    }
+
+    static HashMap<String, String> readToHashMap(String file) throws IOException {
+        return OBJECT_MAPPER.readValue(new File(file), new TypeReference<>() {
         });
     }
 }
