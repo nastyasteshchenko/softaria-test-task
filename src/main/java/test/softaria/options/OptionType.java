@@ -37,7 +37,7 @@ public enum OptionType {
         return argsNumber;
     }
 
-    public static String getAvailableOptionsInfo(){
+    public static String getAvailableOptionsInfo() {
         StringBuilder sb = new StringBuilder();
         for (OptionType optionType : OptionType.values()) {
             sb.append("-")
