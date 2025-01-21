@@ -9,8 +9,8 @@ public class OptionsValuesException extends Exception {
         return new OptionsValuesException(String.format("Duplicated option '%s'.", option));
     }
 
-    public static OptionsValuesException notReadableFile(String fileName) {
-        return new OptionsValuesException(String.format("Cannot read from '%s'.", fileName));
+    public static OptionsValuesException notReadableFile(String filePath) {
+        return new OptionsValuesException(String.format("Cannot read from '%s'.", filePath));
     }
 
     public static OptionsValuesException noSuchFile(String filePath) {

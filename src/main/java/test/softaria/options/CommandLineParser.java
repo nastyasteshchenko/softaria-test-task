@@ -43,12 +43,6 @@ public class CommandLineParser {
         return new OptionsValues(yesterdayPagesFile, todayPagesFile, name);
     }
 
-    private static void checkIfRegularFile(String inputPath) throws OptionsValuesException {
-        if (!Files.isRegularFile(Path.of(inputPath))) {
-            throw OptionsValuesException.notReadableFile(inputPath);
-        }
-    }
-
     private Option createOption(OptionType optionType) {
         return Option.builder(optionType.getShortName())
                 .argName(optionType.getArgName())
@@ -58,6 +52,12 @@ public class CommandLineParser {
                 .required(true)
                 .optionalArg(false)
                 .build();
+    }
+
+    private void checkIfRegularFile(String inputPath) throws OptionsValuesException {
+        if (!Files.isRegularFile(Path.of(inputPath))) {
+            throw OptionsValuesException.notReadableFile(inputPath);
+        }
     }
 
     private void checkIfFileExists(String inputPath) throws OptionsValuesException {
