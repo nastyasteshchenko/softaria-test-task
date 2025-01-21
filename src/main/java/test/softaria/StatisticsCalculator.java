@@ -24,11 +24,9 @@ public class StatisticsCalculator {
                 .collect(Collectors.toSet());
 
         Set<String> editedPages = new HashSet<>();
-        for (String url : maybeEditedPagesURLs) {
-            if (!yesterdayPages.get(url).equals(todayPages.get(url))) {
-                editedPages.add(url);
-            }
-        }
+        maybeEditedPagesURLs.stream()
+                .filter(url -> !yesterdayPages.get(url).equals(todayPages.get(url)))
+                .forEach(editedPages::add);
 
         return new Statistics(missingPages, newPages, editedPages);
     }
