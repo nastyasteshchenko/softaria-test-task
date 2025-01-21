@@ -1,10 +1,9 @@
-package test.softaria;
+package test.softaria.statistics;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import com.google.common.io.Resources;
-import test.softaria.statistics.Statistics;
-import test.softaria.statistics.StatisticsCalculator;
+import test.softaria.PagesJsonReader;
 
 import java.io.IOException;
 import java.util.Map;
@@ -13,7 +12,7 @@ import java.util.Set;
 class StatisticsCalculatorTest {
 
     @Test
-    void calculateStatisticsTest() throws IOException {
+    void testCalculateStatistics() throws IOException {
         StatisticsCalculator statisticsCalculator = new StatisticsCalculator();
 
         Map<String, String> todayPages =
