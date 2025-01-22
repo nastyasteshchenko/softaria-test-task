@@ -1,11 +1,8 @@
 package test.softaria.options;
 
 public enum OptionType {
-
-    YESTERDAY_PAGES_FILE("y", "set yesterday pages file",
-            "path", 1),
-    TODAY_PAGES_FILE("t", "set today pages file",
-            "path", 1),
+    YESTERDAY_PAGES_FILE("y", "set yesterday pages file", "path", 1),
+    TODAY_PAGES_FILE("t", "set today pages file", "path", 1),
     RECEIVER_NAME("n", "set receiver name (first name and patronymic)",
             "first name and patronymic", 2);
 

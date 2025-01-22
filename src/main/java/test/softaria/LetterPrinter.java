@@ -3,7 +3,6 @@ package test.softaria;
 import test.softaria.statistics.Statistics;
 
 public class LetterPrinter {
-
     private static final String DELIMITER = ", ";
 
     private static final String LETTER_TEMPLATE = """
