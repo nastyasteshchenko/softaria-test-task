@@ -1,9 +1,14 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group = 'test.softaria'
 version = '1.0-SNAPSHOT'
+
+application {
+    mainClass = 'test.softaria.Main'
+}
 
 repositories {
     mavenCentral()
