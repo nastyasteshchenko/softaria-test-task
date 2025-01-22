@@ -39,6 +39,7 @@ public enum OptionType {
 
     public static String getAvailableOptionsInfo() {
         StringBuilder sb = new StringBuilder();
+        sb.append("Available options:\n");
         for (OptionType optionType : OptionType.values()) {
             sb.append("-")
                     .append(optionType.getShortName())

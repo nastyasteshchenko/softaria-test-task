@@ -38,10 +38,8 @@ public class Main {
         try {
             CommandLineParser parser = new CommandLineParser();
             return parser.parse(args);
-        } catch (ParseException e) {
+        } catch (ParseException | OptionsValuesException e) {
             System.err.println(e.getMessage() + "\n\n" + OptionType.getAvailableOptionsInfo());
-        } catch (OptionsValuesException e) {
-            System.err.println(e.getMessage());
         }
         return null;
     }
